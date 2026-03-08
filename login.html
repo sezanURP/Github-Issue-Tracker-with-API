@@ -22,6 +22,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
+   
   <body
     class="bg-gray-100 flex items-center justify-center max-h-screen-[50vh]"
   >
@@ -40,12 +41,14 @@
 
       <form id="loginForm">
         <!-- Username -->
+         <p id="error" class="text-red-700 text-center mt-3"></p>
+         
         <label class="text-base font-semibold">Username</label>
         <input
           id="username"
           type="text"
           placeholder="Enter Username"
-          class="w-full border  border-gray-300 rounded-lg p-2 mt-1 mb-1"
+          class="w-full border border-gray-300 rounded-lg p-2 mt-1 mb-1"
         />
 
         <p class="text-purple-600 font-bold text-sm mb-4">Default: admin</p>
@@ -75,7 +78,7 @@
         <span class="px-3 text-gray-500 text-base">OR</span>
         <hr class="flex-grow" />
       </div>
-
+      
       <p class="text-center text-gray-500 text-sm mb-3">Demo Credentials:</p>
 
       <div class="bg-gray-100 p-4 rounded-lg text-center text-sm">
@@ -84,10 +87,6 @@
       </div>
 
       
-
-      
-
-      <p id="error" class="text-red-700 text-center mt-3"></p>
     </div>
 
     <script src="./script.js"></script>
