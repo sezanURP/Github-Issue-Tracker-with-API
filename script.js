@@ -9,7 +9,7 @@ document.getElementById("loginForm").addEventListener("submit", function (event)
 let passwordInput = document.getElementById("password").value;
 
 if (usernameInput === "admin" && passwordInput === "admin123") {
-   window.location.href = "index.html";
+   window.location.href = "index1.html";
    
 } else {
    document.getElementById("error").innerText = "Invalid username or password.";
@@ -18,7 +18,7 @@ if (usernameInput === "admin" && passwordInput === "admin123") {
 
                   // main page logic start
 
-                  
+
 
 
 
