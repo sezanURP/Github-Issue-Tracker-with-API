@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github Issue Track with API</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Navigation -->
+      <nav class="flex justify-between items-center p-4">
+        <div>
+          <h2 class="text-3xl">
+            <i class="fa-brands fa-1x fa-github"> </i>GitHub Issues Tracker
+          </h2>
+        </div>
+        <div class="flex justify-center gap-5 items-center">
+          <section>
+            <div class="join">
+              <div>
+                <label class="input validator join-item">
+                  <input
+                    id="input-search"
+                    type="text"
+                    placeholder="Search the issues"
+                    required
+                  />
+                </label>
+              </div>
+              <button id="btn-search" class="btn btn-primary join-item">
+                Search
+              </button>
+            </div>
+          </section>
+          <button class="btn btn-primary">+ New Issue</button>
+        </div>
+      </nav>
+
+      <!-- Toggle Button -->
+
+      <div
+        id="toggle-btn"
+        class="shadow-lg shadow-gray-300/50 w-[80%] mx-auto flex items-center gap-5 p-4 mt-3 rounded-md"
+      >
+        <button
+          class="bg-blue-500 text-white border font-bold px-4 py-1 mr-3.5 rounded-[10px]"
+          id="all-btn"
+        >
+          All
+        </button>
+
+        <button
+          class="border font-bold px-4 py-1 mr-3.5 rounded-[10px]"
+          id="open-btn"
+        >
+          Open
+        </button>
+
+        <button
+          class="border font-bold px-4 py-1 rounded-[10px]"
+          id="closed-btn"
+        >
+          Closed
+        </button>
+      </div>
+
+      <!-- Issues number update -->
+
+      <div
+        class="shadow-lg shadow-gray-300/50 w-[80%] mx-auto flex justify-between items-center gap-5 p-2 mt-3 rounded-md"
+      >
+      
+        <div class="flex justify-between items-center gap-3">
+          <img src="./assets/Aperture.png" alt="" />
+          <h2 class="text-2xl font-bold">
+            50 Issues <br />
+            <span class="text-gray-500 text-sm mb-5">
+              Track and Manage your Project Issues
+            </span>
+          </h2>
+        </div>
+
+        
+        <div>
+          <p class="">
+            <i class="fa-solid fa-circle" style="color: green"></i> Open
+            <span class="ml-9"
+              ><i class="fa-solid fa-circle" style="color: blueviolet"></i>
+              Closed</span
+            >
+          </p>
+        </div>
+
+      </div>
+    </header>
+
+    <main></main>
+    <script src="./script.js"></script>
+  </body>
+</html>

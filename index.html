@@ -3,15 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Github Issue Track with API</title>
+    <title>Github Login</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Hind+Siliguri:wght@300;400;500;600;700&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
-      type="text/css"
     />
-
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <link
       rel="stylesheet"
@@ -20,97 +19,76 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
-  <body>
-    <header>
-      <!-- Navigation -->
-      <nav class="flex justify-between items-center p-4">
-        <div>
-          <h2 class="text-3xl">
-            <i class="fa-brands fa-1x fa-github"> </i>GitHub Issues Tracker
-          </h2>
+   
+  <body
+    class="bg-gray-100 flex items-center justify-center  min-h-[70vh]"
+  >
+    <div class="bg-white shadow-lg rounded-xl p-8 w-[40%]">
+      <!-- Logo -->
+      <div class="text-center mb-6">
+        <div
+          class="w-16 h-16 mx-auto rounded-[50%] flex items-center justify-center text-xl"
+        >
+          <i class="fa-brands fa-5x fa-github"></i>
         </div>
-        <div class="flex justify-center gap-5 items-center">
-          <section>
-            <div class="join">
-              <div>
-                <label class="input validator join-item">
-                  <input
-                    id="input-search"
-                    type="text"
-                    placeholder="Search the issues"
-                    required
-                  />
-                </label>
-              </div>
-              <button id="btn-search" class="btn btn-primary join-item">
-                Search
-              </button>
-            </div>
-          </section>
-          <button class="btn btn-primary">+ New Issue</button>
-        </div>
-      </nav>
 
-      <!-- Toggle Button -->
-
-      <div
-        id="toggle-btn"
-        class="shadow-lg shadow-gray-300/50 w-[80%] mx-auto flex items-center gap-5 p-4 mt-3 rounded-md"
-      >
-        <button
-          class="bg-blue-500 text-white border font-bold px-4 py-1 mr-3.5 rounded-[10px]"
-          id="all-btn"
-        >
-          All
-        </button>
-
-        <button
-          class="border font-bold px-4 py-1 mr-3.5 rounded-[10px]"
-          id="open-btn"
-        >
-          Open
-        </button>
-
-        <button
-          class="border font-bold px-4 py-1 rounded-[10px]"
-          id="closed-btn"
-        >
-          Closed
-        </button>
+        <h1 class="text-3xl font-bold mt-10">GitHub Issues Tracker</h1>
+        <p class="text-gray-500 text-sm">Sign in to manage your issues</p>
       </div>
 
-      <!-- Issues number update -->
+      <form id="loginForm">
+        <!-- Username -->
+         <p id="error" class="text-red-700 text-center mt-3"></p>
+         
+        <label class="text-base font-semibold">Username</label>
+        <input
+          id="username"
+          type="text"
+          placeholder="Enter Username"
+          class="w-full border border-gray-300 rounded-lg p-2 mt-1 mb-1"
+        />
 
-      <div
-        class="shadow-lg shadow-gray-300/50 w-[80%] mx-auto flex justify-between items-center gap-5 p-2 mt-3 rounded-md"
-      >
+        <p class="text-purple-600 font-bold text-sm mb-4">Default: admin</p>
+
+        <!-- Password -->
+        <label class="text-base font-semibold">Password</label>
+        <input
+          id="password"
+          type="password"
+          placeholder="Enter Password"
+          class="w-full border border-gray-300 rounded-lg p-2 mt-1 mb-1"
+        />
+
+        <p class="text-purple-600 font-bold text-sm mb-4">Default: admin123</p>
+
+        <button
+          type="submit"
+          class="w-full py-2 rounded-lg text-white font-semibold bg-gradient-to-r from-purple-700 to-indigo-700 hover:opacity-90"
+        >
+          Sign In
+        </button>
+      </form>
+
+      <!-- OR -->
+      <div class="flex items-center my-6">
+        <hr class="flex-grow" />
+        <span class="px-3 text-gray-500 text-base">OR</span>
+        <hr class="flex-grow" />
+      </div>
       
-        <div class="flex justify-between items-center gap-3">
-          <img src="./assets/Aperture.png" alt="" />
-          <h2 class="text-2xl font-bold">
-            50 Issues <br />
-            <span class="text-gray-500 text-sm mb-5">
-              Track and Manage your Project Issues
-            </span>
-          </h2>
-        </div>
+      <p class="text-center text-gray-500 text-sm mb-3">Demo Credentials:</p>
 
-        
-        <div>
-          <p class="">
-            <i class="fa-solid fa-circle" style="color: green"></i> Open
-            <span class="ml-9"
-              ><i class="fa-solid fa-circle" style="color: blueviolet"></i>
-              Closed</span
-            >
-          </p>
-        </div>
-
+      <div class="bg-gray-100 p-4 rounded-lg text-center text-sm">
+        <p><strong>Username:</strong> admin</p>
+        <p><strong>Password:</strong> admin123</p>
       </div>
-    </header>
 
-    <main></main>
+      
+    </div>
+
     <script src="./script.js"></script>
   </body>
 </html>
