@@ -1,5 +1,5 @@
 
-                // login form submission handler
+// login form submission handler
 
 document.getElementById("loginForm").addEventListener("submit", function (event) {
   event.preventDefault();
@@ -15,10 +15,6 @@ if (usernameInput === "admin" && passwordInput === "admin123") {
    document.getElementById("error").innerText = "Invalid username or password.";
 }
 });
-
-                  // main page logic start
-
-
 
 
 
